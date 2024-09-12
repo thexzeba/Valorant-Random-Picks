@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Roles y Agentes - Valorant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Asignación de Roles y Agentes - Valorant</h1>
+        
+        <form id="playerForm">
+            <div>
+                <label for="player1">Jugador 1:</label>
+                <input type="text" id="player1" name="player1" placeholder="Nombre del jugador 1" required>
+            </div>
+            <div>
+                <label for="player2">Jugador 2:</label>
+                <input type="text" id="player2" name="player2" placeholder="Nombre del jugador 2" required>
+            </div>
+            <div>
+                <label for="player3">Jugador 3:</label>
+                <input type="text" id="player3" name="player3" placeholder="Nombre del jugador 3" required>
+            </div>
+            <div>
+                <label for="player4">Jugador 4:</label>
+                <input type="text" id="player4" name="player4" placeholder="Nombre del jugador 4" required>
+            </div>
+            <div>
+                <label for="player5">Jugador 5:</label>
+                <input type="text" id="player5" name="player5" placeholder="Nombre del jugador 5" required>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button" type="button" onclick="toggleAccordion()">Mostrar Tier List del Mapa Seleccionado</button>
+                <div id="tierListContent" class="accordion-content" style="display:none;">
+                    <p id="tierListText">Selecciona un mapa para ver el Tier List</p>
+                </div>
+            </div>
+            <div>
+                <label for="map">Selecciona el mapa:</label>
+                <select id="map" name="map" required>
+                    <option value="ascent">Ascent</option>
+                    <option value="bind">Bind</option>
+                    <option value="breeze">Breeze</option>
+                    <option value="haven">Haven</option>
+                    <option value="icebox">Icebox</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="split">Split</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Pearl</option>
+                </select>
+            </div>
+            <div>
+                <label for="metaAgents">¿Usar solo agentes en meta (S+, S, A)?</label>
+                <input type="checkbox" id="metaAgents" name="metaAgents">
+            </div>
+            <button type="submit">Asignar Roles y Agentes</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
